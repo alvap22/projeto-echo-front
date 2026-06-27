@@ -1,0 +1,238 @@
+.review-detail {
+  min-height: 100vh;
+  background-color: var(--bg-principal);
+  padding: 60px 20px;
+}
+
+.review-detail-loading {
+  min-height: 100vh;
+  background-color: var(--bg-principal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.review-detail-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-slate);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.review-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-slate);
+}
+
+.review-main-info {
+  padding: 32px;
+}
+
+.review-main-info h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.review-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.review-rating {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f59e0b;
+}
+
+.review-author {
+  color: var(--text-secondary);
+}
+
+.author-link {
+  color: var(--cor-principal);
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.author-link:hover {
+  color: var(--cor-hover);
+}
+
+.review-description {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  white-space: pre-wrap;
+}
+
+.review-actions-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  border-top: 1px solid var(--border-slate);
+  border-bottom: 1px solid var(--border-slate);
+  padding: 16px 0;
+}
+
+.likes-counter {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.likes-counter strong {
+  color: var(--text-primary);
+}
+
+.review-actions-bar button.curtido {
+  background-color: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+.review-divider {
+  border: none;
+  border-top: 1px solid var(--border-slate);
+  margin: 40px 0;
+}
+
+.comments-section h2 {
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.new-comment-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.new-comment-box textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 14px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-slate);
+  background-color: var(--bg-principal);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: var(--font-family);
+  resize: vertical;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.new-comment-box textarea:focus {
+  border-color: var(--cor-principal);
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.25);
+}
+
+.new-comment-box button {
+  align-self: flex-end;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comment-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-slate);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.comment-header strong {
+  color: var(--text-primary);
+}
+
+.comment-date {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.comment-text {
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.btn-reply {
+  color: var(--text-secondary);
+}
+
+.btn-reply:hover {
+  color: var(--cor-principal);
+}
+
+.reply-form {
+  margin-top: 16px;
+  padding: 16px;
+  border-left: 3px solid var(--border-slate);
+  background-color: rgba(255, 255, 255, 0.01);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reply-form textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-slate);
+  background-color: var(--bg-principal);
+  color: var(--text-primary);
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+}
+
+.reply-form textarea:focus {
+  border-color: var(--cor-principal);
+}
+
+.reply-card {
+  margin-left: 40px;
+  margin-top: 16px;
+  border-left: 3px solid var(--cor-principal);
+  background-color: rgba(147, 51, 234, 0.03);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
