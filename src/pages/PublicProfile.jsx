@@ -9,7 +9,7 @@ import {
 useParams
 } from "react-router-dom";
 
-import axios from "axios";
+import api from "../services/api";
 
 import Header from "../components/Header";
 
@@ -52,21 +52,8 @@ async function fetchProfile() {
 
   try {
 
-    const token =
-      localStorage.getItem(
-        "token"
-      );
-
     const response =
-      await axios.get(
-        `https://imagines-catfish-sandstorm.ngrok-free.dev/profile/${id}`,
-        {
-          headers: {
-            Authorization:
-              `Bearer ${token}`
-          }
-        }
-      );
+      await api.get(`/profile/${id}`);
 
     setUsuario(
       response.data.usuario
@@ -108,21 +95,7 @@ async function handleSeguir() {
 
 try {
 
-  const token =
-    localStorage.getItem(
-      "token"
-    );
-
-  await axios.post(
-    `https://imagines-catfish-sandstorm.ngrok-free.dev/usuarios/${id}/seguir`,
-    {},
-    {
-      headers: {
-        Authorization:
-          `Bearer ${token}`
-      }
-    }
-  );
+  await api.post(`/usuarios/${id}/seguir`, {});
 
   setSegueUsuario(true);
 
@@ -143,20 +116,7 @@ async function handleDeixarSeguir() {
 
 try {
 
-  const token =
-    localStorage.getItem(
-      "token"
-    );
-
-  await axios.delete(
-    `https://imagines-catfish-sandstorm.ngrok-free.dev/usuarios/${id}/seguir`,
-    {
-      headers: {
-        Authorization:
-          `Bearer ${token}`
-      }
-    }
-  );
+  await api.delete(`/usuarios/${id}/seguir`);
 
   setSegueUsuario(false);
 
