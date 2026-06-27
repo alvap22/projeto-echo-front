@@ -59,7 +59,7 @@ async function fetchProfile() {
 
     const response =
       await axios.get(
-        `http://localhost:3000/profile/${id}`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/profile/${id}`,
         {
           headers: {
             Authorization:
@@ -114,7 +114,7 @@ try {
     );
 
   await axios.post(
-    `http://localhost:3000/usuarios/${id}/seguir`,
+    `https://imagines-catfish-sandstorm.ngrok-free.dev/usuarios/${id}/seguir`,
     {},
     {
       headers: {
@@ -149,7 +149,7 @@ try {
     );
 
   await axios.delete(
-    `http://localhost:3000/usuarios/${id}/seguir`,
+    `https://imagines-catfish-sandstorm.ngrok-free.dev/usuarios/${id}/seguir`,
     {
       headers: {
         Authorization:

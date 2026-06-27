@@ -33,7 +33,7 @@ function CreateReview() {
   useEffect(() => {
     async function fetchGeneros() {
       try {
-        const response = await axios.get("http://localhost:3000/generos");
+        const response = await axios.get("https://imagines-catfish-sandstorm.ngrok-free.dev/generos");
         setListaGeneros(response.data);
       } catch (error) {
         console.error("Erro ao buscar gêneros:", error);
@@ -106,7 +106,7 @@ function CreateReview() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.post("http://localhost:3000/reviews", formData, {
+      await axios.post("https://imagines-catfish-sandstorm.ngrok-free.dev/reviews", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

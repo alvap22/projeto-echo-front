@@ -132,7 +132,7 @@ function Login() {
     try {
       if (isLogin) {
         const response = await axios.post(
-          "http://localhost:3000/auth/login",
+          "https://imagines-catfish-sandstorm.ngrok-free.dev/auth/login",
           { email, senha: password }
         );
 
@@ -145,7 +145,7 @@ function Login() {
           navigate("/home");
         }
       } else {
-        await axios.post("http://localhost:3000/auth/register", {
+        await axios.post("https://imagines-catfish-sandstorm.ngrok-free.dev/auth/register", {
           nome,
           email,
           senha: password,
@@ -175,7 +175,7 @@ function Login() {
   async function handleForgotPassword() {
     try {
       const response = await axios.post(
-        "http://localhost:3000/auth/forgot-password",
+        "https://imagines-catfish-sandstorm.ngrok-free.dev/auth/forgot-password",
         { email: emailRecuperacao }
       );
 

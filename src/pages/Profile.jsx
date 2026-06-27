@@ -38,7 +38,7 @@ function Profile() {
 
         const response =
           await axios.get(
-            "http://localhost:3000/profile",
+            "https://imagines-catfish-sandstorm.ngrok-free.dev/profile",
             {
               headers: {
                 Authorization:
@@ -106,7 +106,7 @@ function Profile() {
         );
 
       await axios.delete(
-        `http://localhost:3000/reviews/${id}`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}`,
         {
           headers: {
             Authorization:

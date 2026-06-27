@@ -32,7 +32,7 @@ function ReviewDetail() {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:3000/reviews/${id}`,
+          `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ function ReviewDetail() {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        `http://localhost:3000/reviews/${id}/comentarios`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}/comentarios`,
         {
           texto: textoComentario,
           id_comentario_pai: null,
@@ -74,7 +74,7 @@ function ReviewDetail() {
       );
 
       const response = await axios.get(
-        `http://localhost:3000/reviews/${id}`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -97,7 +97,7 @@ function ReviewDetail() {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        `http://localhost:3000/reviews/${id}/comentarios`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}/comentarios`,
         {
           texto: respostaTexto,
           id_comentario_pai: idComentario,
@@ -110,7 +110,7 @@ function ReviewDetail() {
       );
 
       const response = await axios.get(
-        `http://localhost:3000/reviews/${id}`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -130,7 +130,7 @@ function ReviewDetail() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `http://localhost:3000/reviews/${id}/curtir`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}/curtir`,
         {},
         {
           headers: {
@@ -156,7 +156,7 @@ function ReviewDetail() {
       setConfirmandoDenuncia(false);
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `http://localhost:3000/reviews/${id}/denunciar`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}/denunciar`,
         {},
         {
           headers: {

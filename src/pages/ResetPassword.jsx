@@ -49,7 +49,7 @@ function ResetPassword() {
 
       const response =
         await axios.post(
-          `http://localhost:3000/auth/reset-password/${token}`,
+          `https://imagines-catfish-sandstorm.ngrok-free.dev/auth/reset-password/${token}`,
           {
             novaSenha,
           }

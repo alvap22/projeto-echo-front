@@ -9,7 +9,7 @@ function GenreFilter({ selectedGenres, setSelectedGenres }) {
   useEffect(() => {
     async function fetchGenres() {
       try {
-        const response = await axios.get("http://localhost:3000/generos");
+        const response = await axios.get("https://imagines-catfish-sandstorm.ngrok-free.dev/generos");
         setGenres(response.data);
       } catch (error) {
         console.error("Erro ao buscar gêneros no filtro:", error);

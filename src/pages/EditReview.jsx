@@ -44,7 +44,7 @@ function EditReview() {
   useEffect(() => {
     async function fetchGeneros() {
       try {
-        const response = await axios.get("http://localhost:3000/generos");
+        const response = await axios.get("https://imagines-catfish-sandstorm.ngrok-free.dev/generos");
         setListaGeneros(response.data);
       } catch (error) {
         console.error("Erro ao buscar gêneros:", error);
@@ -63,7 +63,7 @@ function EditReview() {
 
       const response =
         await axios.get(
-          `http://localhost:3000/reviews/${id}`,
+          `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}`,
           {
             headers: {
               Authorization:
@@ -182,7 +182,7 @@ function EditReview() {
       }
 
       await axios.put(
-        `http://localhost:3000/reviews/${id}`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}`,
         formData,
         {
           headers: {

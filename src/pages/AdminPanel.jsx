@@ -90,7 +90,7 @@ const [aba, setAba] =
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:3000/admin/usuarios",
+        "https://imagines-catfish-sandstorm.ngrok-free.dev/admin/usuarios",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -111,7 +111,7 @@ const [aba, setAba] =
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:3000/admin/usuarios/${id}/toggle`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/admin/usuarios/${id}/toggle`,
         {},
         {
           headers: {
@@ -149,7 +149,7 @@ const [aba, setAba] =
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:3000/admin/denuncias",
+        "https://imagines-catfish-sandstorm.ngrok-free.dev/admin/denuncias",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -191,7 +191,7 @@ const [aba, setAba] =
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:3000/admin/criar-admin",
+        "https://imagines-catfish-sandstorm.ngrok-free.dev/admin/criar-admin",
         {
           nome,
           email,
@@ -226,7 +226,7 @@ const [aba, setAba] =
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:3000/admin/denuncias/${id}`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/admin/denuncias/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -262,7 +262,7 @@ const [aba, setAba] =
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:3000/reviews/${id}`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/reviews/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -298,7 +298,7 @@ const [aba, setAba] =
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:3000/admin/reviews/${id}/restaurar`,
+        `https://imagines-catfish-sandstorm.ngrok-free.dev/admin/reviews/${id}/restaurar`,
         {},
         {
           headers: {
@@ -348,12 +348,12 @@ const [aba, setAba] =
       const token = localStorage.getItem("token");
       
       const [usersRes, reviewsRes] = await Promise.all([
-        axios.get("http://localhost:3000/admin/usuarios", {
+        axios.get("https://imagines-catfish-sandstorm.ngrok-free.dev/admin/usuarios", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }),
-        axios.get("http://localhost:3000/admin/denuncias", {
+        axios.get("https://imagines-catfish-sandstorm.ngrok-free.dev/admin/denuncias", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
